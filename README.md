@@ -10,7 +10,7 @@ To run, simply download and verify you have the prerequisites of Terraform+AWS(C
 
 1) open terminal
 2) clone this project
-3) change directory to example folder with *.tf files
+3) change directory to example folder with *.tf files.  In my case working folder name is 'IAC'.
 4) set the following AWS environment variables for your AWS keys and region:
 > export AWS_ACCESS_KEY_ID="anaccesskey"
 
