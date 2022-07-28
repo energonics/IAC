@@ -29,3 +29,5 @@ To run, simply download and verify you have the prerequisites of Terraform+AWS(C
 11) Load the URL given in the output from your run in your favorite web browser (from tutorial instructions).
 12) Don't forget to clean up and 'terraform destroy -var="app_version=1.0.0" along with any AWS account console cleanup to clear out any leftover artifacts if you are wanting to clean it all up in AWS.
 
+If you have any trouble with this, you can try to verify all the prerequisites at the link tutorial at the top and potentially this site as well:  https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
+
