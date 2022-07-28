@@ -13,10 +13,13 @@ To run, simply download and verify you have the prerequisites of Terraform+AWS(C
 3) change directory to example folder with *.tf files
 4) set the following AWS environment variables for your AWS keys and region:
 > export AWS_ACCESS_KEY_ID="anaccesskey"
+
 > export AWS_SECRET_ACCESS_KEY="asecretkey"
+
 > export AWS_DEFAULT_REGION="us-west-2"
 5) create the s3 bucket for the zip upload:
 > aws s3api create-bucket --bucket=tf-serverless-example --region=us-east-1
+
 > aws s3 cp example.zip s3://tf-serverless-example/v1.0.0/example-serverless.zip
 7)  execute '>terraform init'
 8) execute '>terraform validate'
