@@ -11,7 +11,18 @@ To run, simply download and verify you have the prerequisites of Terraform+AWS(C
 1) open terminal
 2) clone this project
 3) change directory to example folder with *.tf files
-4) execute '>terraform init'
-5) execute '>terraform validate'
-6) execute '>terraform apply -var="app_version=1.0.0"
+4) set the following AWS environment variables for your AWS keys and region:
+> export AWS_ACCESS_KEY_ID="anaccesskey"
+> export AWS_SECRET_ACCESS_KEY="asecretkey"
+> export AWS_DEFAULT_REGION="us-west-2"
+5) create the s3 bucket for the zip upload:
+> aws s3api create-bucket --bucket=tf-serverless-example --region=us-east-1
+> aws s3 cp example.zip s3://tf-serverless-example/v1.0.0/example-serverless.zip
+7)  execute '>terraform init'
+8) execute '>terraform validate'
+9) execute '>terraform apply -var="app_version=1.0.0"
+10) use aws console to test function on command line:
+> aws lambda invoke --region=us-east-1 --function-name=ServerlessExample output.txt
+11) Load the URL given in the output from your run in your favorite web browser (from tutorial instructions).
+12) Don't forget to clean up and 'terraform destroy -var="app_version=1.0.0" along with any AWS account console cleanup to clear out any leftover artifacts if you are wanting to clean it all up in AWS.
 
