@@ -20,7 +20,7 @@ To run, simply download and verify you have the prerequisites of Terraform+AWS(C
 5) create the s3 bucket for the zip upload:
 > aws s3api create-bucket --bucket=tf-serverless-example --region=us-east-1
 
-> aws s3 cp example.zip s3://tf-serverless-example/v1.0.0/example-serverless.zip
+> aws s3 cp example-serverless.zip s3://tf-serverless-example/v1.0.0/example-serverless.zip
 7)  execute '>terraform init'
 8) execute '>terraform validate'
 9) execute '>terraform apply -var="app_version=1.0.0"
